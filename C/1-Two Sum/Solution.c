@@ -1,3 +1,4 @@
+#include<stdio.h>
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     static int p[2];
     for(int i = 0; i < numsSize - 1; i++)
