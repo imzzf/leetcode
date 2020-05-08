@@ -1,6 +1,6 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
    public:
     string intToRoman(int num) {
@@ -11,7 +11,7 @@ class Solution {
         string res;
         for (int i = 0; i < values.size(); i++) {
             while (num >= values[i]) {
-                res.append(strs[i]);//依次连接最大的小于该数的组合
+                res.append(strs[i]);  //依次连接最大的小于该数的组合
                 num -= values[i];
             }
         }
