@@ -39,6 +39,23 @@ class Solution {
         }
         return ans;
     }
+
+    vector<int> preorderTraversal_2(TreeNode *root) {
+        vector<int> ans;
+        if (!root) return ans;
+        stack<TreeNode *> s;
+        TreeNode *node = root;
+        while (node || !s.empty()) {
+            while (node) {
+                ans.push_back(node->val);
+                s.push(node->right);
+                node = node->left;
+            }
+            node = s.top();
+            s.pop();
+        }
+        return ans;
+    }
 };
 
 int main() {
