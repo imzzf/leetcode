@@ -22,6 +22,7 @@ public class lc111 {
     //dfs
     public int minDepth(TreeNode root) {
         // 用例[1,2]，此时返回的结果应该是2而不是1，因为节点1是根节点，题目要求的是从叶子节点到根节点的最短距离
+        // 如果一个节点的左或右至少有一个不空时，它并不是叶子节点
         // 这里容易考虑不清
         if (root == null) {
             return 0;
