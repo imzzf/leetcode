@@ -11,11 +11,10 @@ public class lc088 {
         int j = n - 1;
         while (i >= 0 && j >= 0) {
             if (nums1[i] > nums2[j]) {
-                nums1[p] = nums1[i--];
+                nums1[p--] = nums1[i--];
             } else {
-                nums1[p] = nums2[j--];
+                nums1[p--] = nums2[j--];
             }
-            --p;
         }
         while (j >= 0) {
             nums1[p--] = nums2[j--];
